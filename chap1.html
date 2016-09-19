@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>template</title>
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>タイトル</h1>
+<h2>サブタイトル</h2>
+</div><!-- /.header-contents -->
+</header>
+<div class="main-wrapper">
+<section>
+	
+</section>
+</div><!-- /.main-wrapper -->
+<footer>JavaScript Samples</footer>
+    <script>
+        // 未定義かどうかのチェック
+        var input;
+        if(input === undefined) {
+            console.log("undefinedだよ");
+        } else {
+            console.log("undefinedじゃないよ");
+        }
+        
+        // undefinedは真偽値のコンテキストで使用されるとfalseとしてふるまう。
+        var myArray = [];
+        if(!myArray[0]) {
+            console.log("配列が未定義だよ");
+        }
+        
+        // undefinedは数値のコンテキストで使用されるとNaNと変換される。
+        var a;
+        console.log(a + 2);
+        
+        // 数値のコンテキストではnull値は0としてふるまう。
+        var n = null;
+        console.log(n + 10);
+        
+        // データ型の変換
+        console.log("データ型の変換");
+        console.log("37" - 7);
+        console.log("37" + 7);
+        
+        // 文字列から数値への変換
+        console.log((+"1.1") + (+"1.1"));
+        
+        // オブジェクトリテラル
+        var sales = "Toyota";
+        
+        function carTypes(name) {
+            if(name === "Honda") {
+                return name;
+            } else {
+                return "Sorry, We don't sell" + name;
+            }
+        }
+        var car = {myCar: "Saturn", getHondaCar: carTypes("Honda"), getSuzukiCar: carTypes("Suzuki"), special:sales};
+        console.log(car.myCar);
+        console.log(car.getHondaCar);
+        console.log(car.getSuzukiCar);
+        console.log(car.special);
+        
+        var foo = {a : "alpha", 2 : "two"};
+        console.log(foo.a);
+        console.log(foo[2]);
+        console.log(foo["a"]);
+        console.log(foo["2"]);
+    </script>
+</body>
+</html>
